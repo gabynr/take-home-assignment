@@ -7,7 +7,7 @@ function App() {
   const [textOutput, setTextOutput] = React.useState('');
 
   const handleRadioChange = event => {
-    setConversionMode(event.target.value);
+     setConversionMode(event.target.value);
   }
 
   const handleTextareaChange = event => {
@@ -16,7 +16,14 @@ function App() {
 
   const handleSubmit = event => {
     event.preventDefault();
-    setTextOutput('Your formatted text will go here!')
+
+    /* when the option was lowercase the text change to that option if not that change uppercase */
+    if (conversionMode === 'lowercase') {
+      setTextOutput(textInput.toLowerCase());
+    } else {
+      setTextOutput(textInput.toUpperCase());
+    }
+
   };
 
   return (
