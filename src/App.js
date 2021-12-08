@@ -62,7 +62,7 @@ function App() {
             />
             <label htmlFor="conversion-1">Convert text to uppercase</label>
           </div>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit"  />
           <div className="result-wrapper form-control form-control__text">
             <label htmlFor="result">Converted text:</label>
             <output id="result">{textOutput}</output>
